@@ -1,8 +1,8 @@
 package com.skypro.course_work_spring;
 
 import com.skypro.course_work_spring.model.Question;
-import com.skypro.course_work_spring.repository.JavaQuestionRepository;
-import com.skypro.course_work_spring.service.JavaQuestionService;
+import com.skypro.course_work_spring.repository.MathQuestionRepository;
+import com.skypro.course_work_spring.service.MathQuestionService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -11,17 +11,18 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class JavaQuestionServiceTest {
+public class MathQuestionServiceTest {
 
     @Mock
-    private JavaQuestionRepository questionRepository;
+    private MathQuestionRepository questionRepository;
 
     @InjectMocks
-    private JavaQuestionService questionService;
+    private MathQuestionService questionService;
 
     @Test
     public void shouldNewExceptionAddNewQuestionWithQAndA(){
